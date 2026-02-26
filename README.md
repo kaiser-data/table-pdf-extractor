@@ -47,7 +47,7 @@ No cloud APIs. No data leaves your machine.
 ### Install
 
 ```bash
-git clone https://github.com/YOUR_USER/table-pdf-extractor.git
+git clone https://github.com/kaiser-data/table-pdf-extractor.git
 cd table-pdf-extractor
 
 python3 -m venv .venv
