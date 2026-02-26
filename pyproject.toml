@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "table-pdf-extractor"
+version = "0.1.0"
+description = "Extract tables from PDFs and images into CSV — optimized for edge hardware"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+dependencies = [
+    "requests",
+    "pdf2image",
+    "Pillow",
+]
+
+[project.optional-dependencies]
+docling = ["docling"]
+img2table = ["img2table[tesseract]"]
+all = ["docling", "img2table[tesseract]"]
+
+[project.scripts]
+table-extract = "table_extractor.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["table_extractor*"]
